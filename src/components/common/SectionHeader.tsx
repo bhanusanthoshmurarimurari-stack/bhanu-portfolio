@@ -26,11 +26,11 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className={`inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full bg-cream/70 border border-gold-500/25 text-xs font-semibold uppercase tracking-widest text-navy-900 ${
+          className={`inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full bg-[#FFA2B6]/30 border border-[#E43D12]/30 text-xs font-semibold uppercase tracking-widest text-[#242424] ${
             isCenter ? 'mx-auto' : ''
           }`}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-gold-500" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#E43D12]" />
           <span>{badge}</span>
         </motion.div>
       )}
@@ -40,18 +40,18 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-navy-900"
+        className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#E43D12]"
       >
         {title}
       </motion.h2>
 
-      {/* Luxury thin gold divider line */}
+      {/* Thin color accent divider line */}
       <motion.div
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className={`h-0.5 w-16 bg-gradient-to-r from-gold-500/80 via-gold-400 to-transparent my-4 ${
+        className={`h-0.5 w-16 bg-gradient-to-r from-[#E43D12] via-[#EFB11D] to-transparent my-4 ${
           isCenter ? 'mx-auto' : ''
         }`}
       />
@@ -62,7 +62,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="text-base sm:text-lg text-charcoal/70 leading-relaxed font-normal"
+          className="text-base sm:text-lg text-[#242424]/75 leading-relaxed font-normal"
         >
           {subtitle}
         </motion.p>

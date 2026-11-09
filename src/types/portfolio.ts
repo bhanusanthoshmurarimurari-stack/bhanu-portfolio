@@ -56,3 +56,4 @@ export interface PhilosophyPillar {
   principle: string;
   description: string;
 }
+

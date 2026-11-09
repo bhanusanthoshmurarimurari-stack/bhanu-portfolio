@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="orangeGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFA2B6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#EBE9E1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E43D12"/>
+      <stop offset="50%" stop-color="#D6536D"/>
+      <stop offset="100%" stop-color="#EFB11D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background in Warm Off-White -->
+  <rect width="1200" height="630" fill="#EBE9E1"/>
+
+  <!-- Ambient Glow in Soft Pink -->
+  <circle cx="600" cy="240" r="450" fill="url(#orangeGlow)"/>
+
+  <!-- Decorative Outer Border -->
+  <rect x="30" y="30" width="1140" height="570" rx="20" fill="none" stroke="#E43D12" stroke-width="2" stroke-opacity="0.35"/>
+  <rect x="42" y="42" width="1116" height="546" rx="14" fill="none" stroke="#FFA2B6" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Monogram Seal Center Top -->
+  <g transform="translate(555, 90)">
+    <rect width="90" height="90" rx="20" fill="#E43D12" stroke="#EFB11D" stroke-width="2"/>
+    <text x="45" y="58" font-family="'Playfair Display', Georgia, serif" font-size="42" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      B<tspan fill="#EFB11D">S</tspan>
+    </text>
+    <circle cx="68" cy="28" r="3" fill="#EFB11D"/>
+  </g>
+
+  <!-- Main Title in Vibrant Orange -->
+  <text x="600" y="270" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="600" fill="#E43D12" text-anchor="middle" letter-spacing="0.5">
+    Bhanu Santhosh Murari
+  </text>
+
+  <!-- Professional Subtitle in Rose Pink -->
+  <text x="600" y="325" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="600" fill="#D6536D" text-anchor="middle" letter-spacing="4">
+    FULL STACK DEVELOPER
+  </text>
+
+  <!-- Divider Line -->
+  <line x1="450" y1="365" x2="750" y2="365" stroke="url(#primaryGrad)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Headline in Dark Charcoal -->
+  <text x="600" y="425" font-family="'Playfair Display', Georgia, serif" font-size="28" font-style="italic" fill="#242424" text-anchor="middle" opacity="0.9">
+    "Building Digital Experiences That Make an Impact."
+  </text>
+
+  <!-- Tech Stack Badges Bottom -->
+  <g transform="translate(600, 490)">
+    <text font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#E43D12" text-anchor="middle" letter-spacing="2">
+      REACT.JS • NODE.JS • EXPRESS • REST APIS • MONGODB • SQL
+    </text>
+  </g>
+
+  <!-- Availability & Location Tag -->
+  <text x="600" y="545" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="500" fill="#242424" opacity="0.6" text-anchor="middle" letter-spacing="1">
+    OPEN TO OPPORTUNITIES &amp; COLLABORATIONS • BHANU-APP.DEV
+  </text>
+</svg>

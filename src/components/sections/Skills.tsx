@@ -19,17 +19,17 @@ export const Skills: React.FC = () => {
   const getCategoryIcon = (id: string) => {
     switch (id) {
       case 'frontend':
-        return <Code2 className="w-5 h-5 text-gold-600" />;
+        return <Code2 className="w-5 h-5 text-[#E43D12]" />;
       case 'backend':
-        return <Server className="w-5 h-5 text-gold-600" />;
+        return <Server className="w-5 h-5 text-[#E43D12]" />;
       case 'database':
-        return <Database className="w-5 h-5 text-gold-600" />;
+        return <Database className="w-5 h-5 text-[#E43D12]" />;
       case 'programming':
-        return <Terminal className="w-5 h-5 text-gold-600" />;
+        return <Terminal className="w-5 h-5 text-[#E43D12]" />;
       case 'tools':
-        return <Wrench className="w-5 h-5 text-gold-600" />;
+        return <Wrench className="w-5 h-5 text-[#E43D12]" />;
       default:
-        return <Sparkles className="w-5 h-5 text-gold-600" />;
+        return <Sparkles className="w-5 h-5 text-[#E43D12]" />;
     }
   };
 
@@ -38,7 +38,7 @@ export const Skills: React.FC = () => {
     : skillCategories.filter(cat => cat.id === selectedCategory);
 
   return (
-    <section id="skills" className="py-24 lg:py-32 bg-ivory relative overflow-hidden">
+    <section id="skills" className="py-24 lg:py-32 bg-[#EBE9E1] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
           badge="Core Competencies"
@@ -53,8 +53,8 @@ export const Skills: React.FC = () => {
             onClick={() => setSelectedCategory('all')}
             className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-200 border ${
               selectedCategory === 'all'
-                ? 'bg-navy-900 text-ivory border-gold-500 shadow-sm'
-                : 'bg-cream/60 hover:bg-cream text-charcoal/70 border-gold-500/20'
+                ? 'bg-[#E43D12] text-white border-[#EFB11D] shadow-sm'
+                : 'bg-[#FFA2B6]/25 hover:bg-[#FFA2B6]/50 text-[#242424] border-[#E43D12]/20'
             }`}
           >
             All Categories
@@ -65,8 +65,8 @@ export const Skills: React.FC = () => {
               onClick={() => setSelectedCategory(cat.id)}
               className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-200 border ${
                 selectedCategory === cat.id
-                  ? 'bg-navy-900 text-ivory border-gold-500 shadow-sm'
-                  : 'bg-cream/60 hover:bg-cream text-charcoal/70 border-gold-500/20'
+                  ? 'bg-[#E43D12] text-white border-[#EFB11D] shadow-sm'
+                  : 'bg-[#FFA2B6]/25 hover:bg-[#FFA2B6]/50 text-[#242424] border-[#E43D12]/20'
               }`}
             >
               {cat.title}
@@ -85,25 +85,25 @@ export const Skills: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                className="group rounded-2xl bg-white border border-gold-500/25 p-7 shadow-luxury hover:shadow-luxury-hover hover:border-gold-500/60 transition-all duration-300 flex flex-col justify-between"
+                className="group rounded-2xl bg-[#EBE9E1] border border-[#E43D12]/25 p-7 shadow-luxury hover:shadow-luxury-hover hover:border-[#E43D12]/60 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   {/* Card Header with Icon */}
-                  <div className="flex items-center justify-between pb-4 border-b border-gold-500/15 mb-5">
+                  <div className="flex items-center justify-between pb-4 border-b border-[#E43D12]/15 mb-5">
                     <div className="flex items-center gap-3">
-                      <div className="p-2.5 rounded-xl bg-cream border border-gold-500/30">
+                      <div className="p-2.5 rounded-xl bg-[#FFA2B6]/30 border border-[#E43D12]/30">
                         {getCategoryIcon(category.id)}
                       </div>
-                      <h3 className="font-serif font-bold text-lg text-navy-900">
+                      <h3 className="font-serif font-bold text-lg text-[#242424]">
                         {category.title}
                       </h3>
                     </div>
-                    <span className="text-[11px] font-mono text-gold-700 bg-gold-50 px-2 py-0.5 rounded border border-gold-500/25">
+                    <span className="text-[11px] font-mono text-[#242424] bg-[#EFB11D]/40 px-2 py-0.5 rounded border border-[#EFB11D] font-bold">
                       {category.skills.length} Items
                     </span>
                   </div>
 
-                  <p className="text-xs text-charcoal/70 mb-6 leading-relaxed">
+                  <p className="text-xs text-[#242424]/75 mb-6 leading-relaxed">
                     {category.description}
                   </p>
 
@@ -116,12 +116,12 @@ export const Skills: React.FC = () => {
                           key={sIdx}
                           className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
                             isPlaceholderNotice
-                              ? 'border border-dashed border-gold-500/40 bg-gold-50/50 text-gold-800 italic hover:border-gold-500'
-                              : 'bg-ivory border border-gold-500/25 hover:border-gold-500 text-navy-900 hover:bg-cream/60 hover:-translate-y-0.5 shadow-sm'
+                              ? 'border border-dashed border-[#D6536D]/50 bg-[#FFA2B6]/25 text-[#D6536D] italic hover:border-[#D6536D]'
+                              : 'bg-white/80 border border-[#E43D12]/25 hover:border-[#E43D12] text-[#242424] hover:bg-[#FFA2B6]/30 hover:-translate-y-0.5 shadow-sm'
                           }`}
                         >
                           {!isPlaceholderNotice && (
-                            <Check className="w-3 h-3 text-gold-600" />
+                            <Check className="w-3 h-3 text-[#E43D12]" />
                           )}
                           <span>{skill.name}</span>
                         </div>
@@ -131,9 +131,9 @@ export const Skills: React.FC = () => {
                 </div>
 
                 {/* Footer Tag */}
-                <div className="mt-8 pt-4 border-t border-gold-500/10 flex items-center justify-between text-[11px] text-charcoal/50">
-                  <span className="flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-gold-500" />
+                <div className="mt-8 pt-4 border-t border-[#E43D12]/15 flex items-center justify-between text-[11px] text-[#242424]/60">
+                  <span className="flex items-center gap-1 font-semibold text-[#E43D12]">
+                    <Sparkles className="w-3 h-3 text-[#EFB11D]" />
                     Verified Entry
                   </span>
                   <span className="italic font-serif">Editable initial entry</span>
@@ -144,10 +144,10 @@ export const Skills: React.FC = () => {
         </motion.div>
 
         {/* Ethical Transparency Note: No Invented Proficiency Percentages */}
-        <div className="mt-12 max-w-2xl mx-auto p-4 rounded-xl bg-cream/50 border border-gold-500/20 text-xs text-charcoal/70 flex items-center gap-3">
-          <Info className="w-4 h-4 text-gold-600 flex-shrink-0" />
+        <div className="mt-12 max-w-2xl mx-auto p-4 rounded-xl bg-[#FFA2B6]/25 border border-[#E43D12]/25 text-xs text-[#242424] flex items-center gap-3">
+          <Info className="w-4 h-4 text-[#E43D12] flex-shrink-0" />
           <p>
-            <span className="font-semibold text-navy-900">Professional Note:</span> Skills are categorized by verified foundation and practical experience without fabricated percentage bars or arbitrary proficiency levels. Configurable via <code className="text-navy-950 font-mono text-[11px] bg-white px-1.5 py-0.5 rounded border border-gold-500/30">src/data/portfolioData.ts</code>.
+            <span className="font-bold text-[#E43D12]">Professional Note:</span> Skills are categorized by verified foundation and practical experience without fabricated percentage bars or arbitrary proficiency levels. Configurable via <code className="text-[#E43D12] font-mono text-[11px] bg-white px-1.5 py-0.5 rounded border border-[#E43D12]/30">src/data/portfolioData.ts</code>.
           </p>
         </div>
       </div>

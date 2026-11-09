@@ -36,13 +36,13 @@ export const GoldButton: React.FC<GoldButtonProps> = ({
 
   const variantStyles = {
     primary:
-      'bg-gold-500 hover:bg-gold-600 text-navy-950 font-semibold shadow-luxury hover:shadow-luxury-hover border border-gold-300/40 hover:border-gold-300 active:scale-[0.98]',
+      'bg-[#E43D12] hover:bg-[#CA340D] text-white font-semibold shadow-luxury hover:shadow-luxury-hover border border-[#EFB11D]/40 hover:border-[#EFB11D] active:scale-[0.98]',
     secondary:
-      'bg-navy-900 hover:bg-navy-800 text-ivory font-medium shadow-luxury hover:shadow-luxury-hover border border-gold-500/30 hover:border-gold-500/60 active:scale-[0.98]',
+      'bg-[#EFB11D] hover:bg-[#D49911] text-[#242424] font-semibold shadow-luxury hover:shadow-luxury-hover border border-[#E43D12]/30 hover:border-[#E43D12]/60 active:scale-[0.98]',
     outline:
-      'bg-transparent hover:bg-cream/60 text-navy-900 font-medium border border-gold-500/50 hover:border-gold-500 hover:text-navy-950 active:scale-[0.98]',
+      'bg-transparent hover:bg-[#FFA2B6]/30 text-[#242424] font-semibold border border-[#E43D12]/60 hover:border-[#E43D12] hover:text-[#E43D12] active:scale-[0.98]',
     ghost:
-      'bg-transparent hover:bg-gold-500/10 text-navy-900 font-medium border border-transparent hover:border-gold-500/20 active:scale-[0.98]'
+      'bg-transparent hover:bg-[#FFA2B6]/20 text-[#242424] font-medium border border-transparent hover:border-[#E43D12]/20 active:scale-[0.98]'
   };
 
   const content = (
@@ -53,7 +53,7 @@ export const GoldButton: React.FC<GoldButtonProps> = ({
     </>
   );
 
-  const baseClasses = `group relative inline-flex items-center justify-center rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold-500/40 focus:ring-offset-2 focus:ring-offset-ivory disabled:opacity-50 disabled:pointer-events-none select-none ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
+  const baseClasses = `group relative inline-flex items-center justify-center rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#E43D12]/40 focus:ring-offset-2 focus:ring-offset-[#EBE9E1] disabled:opacity-50 disabled:pointer-events-none select-none ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
 
   if (href) {
     return (
