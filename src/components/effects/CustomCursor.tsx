@@ -56,9 +56,9 @@ export const CustomCursor: React.FC = () => {
 
   return (
     <>
-      {/* Precision inner dot in Vibrant Orange */}
+      {/* Precision inner gold dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-[#E43D12] pointer-events-none z-50"
+        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-gold-600 pointer-events-none z-50 mix-blend-multiply"
         animate={{
           x: mousePosition.x - 4,
           y: mousePosition.y - 4,
@@ -67,14 +67,14 @@ export const CustomCursor: React.FC = () => {
         transition={{ type: 'spring', damping: 28, stiffness: 450, mass: 0.1 }}
       />
 
-      {/* Outer ring in Soft Pink / Vibrant Orange */}
+      {/* Luxury outer ring */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#FFA2B6] pointer-events-none z-50"
+        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-gold-500/40 pointer-events-none z-50"
         animate={{
           x: mousePosition.x - 16,
           y: mousePosition.y - 16,
           scale: isPointer ? 1.4 : 1,
-          borderColor: isPointer ? '#E43D12' : '#FFA2B6'
+          borderColor: isPointer ? 'rgba(197, 164, 109, 0.7)' : 'rgba(197, 164, 109, 0.35)'
         }}
         transition={{ type: 'spring', damping: 20, stiffness: 220, mass: 0.3 }}
       />

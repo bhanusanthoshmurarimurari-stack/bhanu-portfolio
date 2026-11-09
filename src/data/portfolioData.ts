@@ -102,7 +102,7 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/bhanusanthoshmurari-stack',
     liveUrl: 'https://github.com/bhanusanthoshmurari-stack',
     featured: true,
-    accentColor: '#E43D12',
+    accentColor: '#C5A46D',
     mockupType: 'browser'
   },
   {
@@ -122,7 +122,7 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/bhanusanthoshmurari-stack',
     liveUrl: 'https://github.com/bhanusanthoshmurari-stack',
     featured: true,
-    accentColor: '#D6536D',
+    accentColor: '#17233B',
     mockupType: 'code'
   },
   {
@@ -142,7 +142,7 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/bhanusanthoshmurari-stack',
     liveUrl: 'https://github.com/bhanusanthoshmurari-stack',
     featured: false,
-    accentColor: '#EFB11D',
+    accentColor: '#C5A46D',
     mockupType: 'dashboard'
   }
 ];
@@ -171,4 +171,3 @@ export const educationData: EducationItem[] = [
     isRecent: false
   }
 ];
-

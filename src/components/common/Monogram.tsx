@@ -21,9 +21,9 @@ export const Monogram: React.FC<MonogramProps> = ({
   };
 
   const bgStyles = {
-    dark: 'bg-[#E43D12] text-white border-[#EFB11D]/50 shadow-luxury',
-    light: 'bg-[#EBE9E1] text-[#242424] border-[#E43D12]/30 shadow-card-soft',
-    gold: 'bg-[#EFB11D] text-[#242424] border-[#E43D12]/40 shadow-gold-glow'
+    dark: 'bg-navy-900 text-ivory border-gold-500/40 shadow-luxury',
+    light: 'bg-white text-navy-900 border-gold-500/30 shadow-card-soft',
+    gold: 'bg-gold-500 text-navy-950 border-gold-300 shadow-gold-glow'
   };
 
   return (
@@ -32,14 +32,14 @@ export const Monogram: React.FC<MonogramProps> = ({
       aria-label="Bhanu Santhosh Murari Monogram Logo"
     >
       {withRing && (
-        <span className="absolute inset-0.5 rounded-[10px] border border-[#EFB11D]/30 pointer-events-none" />
+        <span className="absolute inset-0.5 rounded-[10px] border border-gold-500/25 pointer-events-none" />
       )}
       <div className="font-serif font-bold tracking-tight select-none flex items-center justify-center">
         <span>B</span>
-        <span className={`ml-0.5 ${variant === 'dark' ? 'text-[#EFB11D]' : 'text-[#E43D12]'}`}>S</span>
+        <span className="text-gold-500 ml-0.5">S</span>
       </div>
-      {/* Decorative pinpoint dot */}
-      <span className={`absolute top-1 right-1 w-1 h-1 rounded-full ${variant === 'dark' ? 'bg-[#EFB11D]' : 'bg-[#E43D12]'} opacity-90`} />
+      {/* Decorative luxury pinpoint dot */}
+      <span className="absolute top-1 right-1 w-1 h-1 rounded-full bg-gold-400 opacity-80" />
     </div>
   );
 };

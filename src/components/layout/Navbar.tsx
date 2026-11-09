@@ -40,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#EBE9E1]/90 backdrop-blur-md py-3.5 shadow-sm border-b border-[#E43D12]/20'
+          ? 'bg-ivory/90 backdrop-blur-md py-3.5 shadow-sm border-b border-gold-500/20'
           : 'bg-transparent py-5'
       }`}
     >
@@ -55,10 +55,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
           >
             <Monogram size="md" variant="dark" />
             <div className="flex flex-col">
-              <span className="font-serif tracking-wider font-semibold text-sm sm:text-base text-[#242424] group-hover:text-[#E43D12] transition-colors">
+              <span className="font-serif tracking-wider font-semibold text-sm sm:text-base text-navy-900 group-hover:text-gold-600 transition-colors">
                 BHANU SANTHOSH
               </span>
-              <span className="text-[10px] uppercase tracking-widest font-medium text-[#242424]/60">
+              <span className="text-[10px] uppercase tracking-widest font-medium text-charcoal/60">
                 Full Stack Developer
               </span>
             </div>
@@ -66,7 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
 
           {/* Desktop Nav Links */}
           <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
-            <div className="flex items-center bg-[#FFA2B6]/25 px-2 py-1.5 rounded-full border border-[#E43D12]/20">
+            <div className="flex items-center bg-cream/50 px-2 py-1.5 rounded-full border border-gold-500/15">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.href.replace('#', '');
                 return (
@@ -76,14 +76,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
                     onClick={(e) => handleLinkClick(e, link.href)}
                     className={`relative px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-200 ${
                       isActive
-                        ? 'text-white font-bold'
-                        : 'text-[#242424]/80 hover:text-[#E43D12] hover:bg-[#FFA2B6]/30'
+                        ? 'text-navy-950 font-bold'
+                        : 'text-charcoal/70 hover:text-navy-900 hover:bg-gold-500/10'
                     }`}
                   >
                     {isActive && (
                       <motion.span
                         layoutId="activeNavPill"
-                        className="absolute inset-0 rounded-full bg-[#E43D12] shadow-sm border border-[#EFB11D]/40"
+                        className="absolute inset-0 rounded-full bg-white shadow-sm border border-gold-500/30"
                         transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                       />
                     )}
@@ -97,10 +97,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
             <a
               href="#contact"
               onClick={(e) => handleLinkClick(e, '#contact')}
-              className="ml-3 inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg bg-[#E43D12] hover:bg-[#CA340D] text-white border border-[#EFB11D]/40 shadow-sm transition-all duration-200 hover:-translate-y-0.5"
+              className="ml-3 inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg bg-navy-900 hover:bg-navy-800 text-ivory border border-gold-500/40 hover:border-gold-500 shadow-sm transition-all duration-200 hover:-translate-y-0.5"
             >
               <span>Let's Talk</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-[#EFB11D]" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-gold-400" />
             </a>
           </nav>
 
@@ -109,13 +109,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
             <a
               href="#contact"
               onClick={(e) => handleLinkClick(e, '#contact')}
-              className="inline-flex sm:hidden items-center px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#E43D12] text-white border border-[#EFB11D]/40"
+              className="inline-flex sm:hidden items-center px-3 py-1.5 text-xs font-medium rounded-lg bg-navy-900 text-ivory border border-gold-500/40"
             >
               Talk
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-[#FFA2B6]/30 text-[#242424] border border-[#E43D12]/25 hover:bg-[#FFA2B6]/50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#E43D12]/40"
+              className="p-2 rounded-lg bg-cream/70 text-navy-900 border border-gold-500/25 hover:bg-gold-500/20 transition-colors focus:outline-none focus:ring-2 focus:ring-gold-500/40"
               aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -133,7 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-[#EBE9E1]/98 backdrop-blur-lg border-b border-[#E43D12]/25 px-6 py-6 shadow-luxury overflow-hidden"
+            className="lg:hidden bg-ivory/95 backdrop-blur-lg border-b border-gold-500/25 px-6 py-6 shadow-luxury overflow-hidden"
           >
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => {
@@ -145,23 +145,23 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
                     onClick={(e) => handleLinkClick(e, link.href)}
                     className={`flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-semibold tracking-wide transition-colors ${
                       isActive
-                        ? 'bg-[#FFA2B6]/30 text-[#E43D12] border-l-4 border-[#E43D12]'
-                        : 'text-[#242424]/80 hover:bg-[#FFA2B6]/20'
+                        ? 'bg-cream text-navy-900 border-l-4 border-gold-500'
+                        : 'text-charcoal/80 hover:bg-cream/50'
                     }`}
                   >
                     <span>{link.name}</span>
-                    <span className="text-[#EFB11D] text-xs">→</span>
+                    <span className="text-gold-500 text-xs">→</span>
                   </a>
                 );
               })}
-              <div className="pt-3 border-t border-[#E43D12]/20">
+              <div className="pt-3 border-t border-gold-500/20">
                 <a
                   href="#contact"
                   onClick={(e) => handleLinkClick(e, '#contact')}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold uppercase tracking-wider rounded-lg bg-[#E43D12] hover:bg-[#CA340D] text-white shadow-luxury transition-all"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold uppercase tracking-wider rounded-lg bg-gold-500 hover:bg-gold-600 text-navy-950 shadow-luxury transition-all"
                 >
                   <span>Let's Talk</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#EFB11D]" />
+                  <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>
             </div>

@@ -19,7 +19,7 @@ export const App: React.FC = () => {
   const [toastType, setToastType] = useState<'success' | 'error' | 'info'>('success');
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  // Initial load animation
+  // Initial luxury load animation
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -76,18 +76,18 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#EBE9E1] text-[#242424] font-sans selection:bg-[#E43D12]/20 selection:text-[#E43D12]">
-      {/* Custom trailing cursor */}
+    <div className="relative min-h-screen bg-ivory text-charcoal font-sans selection:bg-gold-500/25 selection:text-navy-950">
+      {/* Subtle luxury custom cursor */}
       <CustomCursor />
 
-      {/* Page Load Intro Animation */}
+      {/* Luxury Page Load Intro Animation */}
       <AnimatePresence>
         {isLoading && (
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6, ease: 'easeInOut' }}
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#EBE9E1]"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-ivory"
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
@@ -98,10 +98,10 @@ export const App: React.FC = () => {
             >
               <Monogram size="xl" variant="dark" withRing={true} />
               <div className="text-center">
-                <span className="font-serif tracking-widest text-lg font-semibold text-[#242424] block">
+                <span className="font-serif tracking-widest text-lg font-semibold text-navy-900 block">
                   {personalInfo.name}
                 </span>
-                <span className="text-[11px] uppercase tracking-widest text-[#E43D12] font-semibold block mt-1">
+                <span className="text-[11px] uppercase tracking-widest text-gold-700 font-medium block mt-1">
                   {personalInfo.title}
                 </span>
               </div>

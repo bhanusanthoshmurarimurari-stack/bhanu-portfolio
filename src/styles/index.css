@@ -4,18 +4,12 @@
 
 @layer base {
   :root {
-    --color-offwhite: #EBE9E1;
-    --color-orange: #E43D12;
-    --color-rose: #D6536D;
-    --color-softpink: #FFA2B6;
-    --color-yellow: #EFB11D;
-    --color-charcoal: #242424;
-
-    /* Legacy mapping */
-    --color-ivory: #EBE9E1;
-    --color-cream: #FFA2B6;
-    --color-gold: #EFB11D;
-    --color-navy: #D6536D;
+    --color-ivory: #FAF8F3;
+    --color-cream: #F3EDE2;
+    --color-gold: #C5A46D;
+    --color-gold-light: #DFC793;
+    --color-navy: #17233B;
+    --color-charcoal: #252525;
   }
 
   html {
@@ -26,55 +20,55 @@
   }
 
   body {
-    background-color: #EBE9E1;
-    color: #242424;
+    background-color: #FAF8F3;
+    color: #252525;
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   }
 
-  /* Custom scrollbar in new color palette */
+  /* Custom luxury scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #EBE9E1;
+    background: #FAF8F3;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #FFA2B6;
+    background: #DFC793;
     border-radius: 4px;
-    border: 2px solid #EBE9E1;
+    border: 2px solid #FAF8F3;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #E43D12;
+    background: #C5A46D;
   }
 }
 
-/* Subtle luxury grain effect overlay with warm off-white and vibrant orange touch */
+/* Subtle luxury grain effect overlay for editorial tactile feel */
 .editorial-paper {
-  background-color: #EBE9E1;
-  background-image: radial-gradient(rgba(228, 61, 18, 0.06) 1px, transparent 0);
+  background-color: #FAF8F3;
+  background-image: radial-gradient(rgba(197, 164, 109, 0.08) 1px, transparent 0);
   background-size: 28px 28px;
 }
 
 .luxury-border {
-  border: 1px solid rgba(228, 61, 18, 0.22);
+  border: 1px solid rgba(197, 164, 109, 0.22);
 }
 
 .luxury-border-strong {
-  border: 1px solid rgba(228, 61, 18, 0.45);
+  border: 1px solid rgba(197, 164, 109, 0.45);
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, #E43D12 0%, #D6536D 50%, #EFB11D 100%);
+  background: linear-gradient(135deg, #17233B 20%, #8E703E 60%, #C5A46D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gold-shimmer-btn {
-  background: linear-gradient(135deg, #E43D12 0%, #D6536D 50%, #E43D12 100%);
+  background: linear-gradient(135deg, #C5A46D 0%, #D4B370 50%, #B08E55 100%);
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;

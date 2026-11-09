@@ -108,13 +108,13 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
     setTimeout(() => {
       setIsSubmitting(false);
 
-      // Launch confetti celebration with reference palette
+      // Launch confetti celebration
       try {
         confetti({
-          particleCount: 55,
+          particleCount: 50,
           spread: 60,
           origin: { y: 0.8 },
-          colors: ['#E43D12', '#D6536D', '#FFA2B6', '#EFB11D', '#EBE9E1']
+          colors: ['#C5A46D', '#17233B', '#FAF8F3']
         });
       } catch (err) {
         // Confetti fallback
@@ -129,7 +129,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-[#EBE9E1] border-t border-[#FFA2B6]/40 relative overflow-hidden">
+    <section id="contact" className="py-24 lg:py-32 bg-cream/40 border-t border-gold-500/20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
           badge="Start a Conversation"
@@ -140,27 +140,27 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 max-w-6xl mx-auto items-start">
           
-          {/* Left Column: Direct Contact Info (5 cols) */}
+          {/* Left Column: Direct Contact Info & Luxury Cards (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-7 rounded-2xl bg-[#EBE9E1] border border-[#E43D12]/30 shadow-luxury">
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#242424] mb-3">
+            <div className="p-7 rounded-2xl bg-white border border-gold-500/30 shadow-luxury">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-navy-900 mb-3">
                 Let's Connect
               </h3>
-              <p className="text-sm text-[#242424]/80 leading-relaxed font-normal mb-6">
+              <p className="text-sm text-charcoal/70 leading-relaxed font-normal mb-6">
                 I'm always interested in connecting with people, exploring innovative ideas, and creating meaningful digital experiences.
               </p>
 
               {/* Direct Email Card with One-Click Copy */}
-              <div className="p-4 rounded-xl bg-[#FFA2B6]/20 border border-[#E43D12]/25 mb-4 flex items-center justify-between gap-3">
+              <div className="p-4 rounded-xl bg-ivory border border-gold-500/25 mb-4 flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3 min-w-0">
-                  <div className="p-2.5 rounded-lg bg-[#E43D12] text-white">
+                  <div className="p-2.5 rounded-lg bg-navy-900 text-gold-400">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[10px] uppercase tracking-wider text-[#242424]/60 font-semibold">
+                    <p className="text-[10px] uppercase tracking-wider text-charcoal/50 font-semibold">
                       Direct Email
                     </p>
-                    <p className="text-xs sm:text-sm font-medium text-[#242424] truncate">
+                    <p className="text-xs sm:text-sm font-medium text-navy-900 truncate">
                       {personalInfo.email}
                     </p>
                   </div>
@@ -168,12 +168,12 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
 
                 <button
                   onClick={handleCopyEmail}
-                  className="p-2 rounded-lg bg-white/80 border border-[#E43D12]/30 text-[#242424] hover:text-[#E43D12] hover:border-[#E43D12] transition-colors flex-shrink-0"
+                  className="p-2 rounded-lg bg-white border border-gold-500/30 text-navy-900 hover:text-gold-700 hover:border-gold-500 transition-colors flex-shrink-0"
                   title="Copy email address"
                   aria-label="Copy email address"
                 >
                   {copiedEmail ? (
-                    <Check className="w-4 h-4 text-[#E43D12]" />
+                    <Check className="w-4 h-4 text-emerald-600" />
                   ) : (
                     <Copy className="w-4 h-4" />
                   )}
@@ -186,33 +186,33 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                   href={personalInfo.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-3.5 rounded-xl bg-[#FFA2B6]/20 hover:bg-[#FFA2B6]/40 border border-[#E43D12]/20 hover:border-[#E43D12]/50 transition-all text-[#242424] group"
+                  className="flex items-center justify-between p-3.5 rounded-xl bg-ivory hover:bg-cream/60 border border-gold-500/25 hover:border-gold-500/50 transition-all text-navy-900 group"
                 >
                   <div className="flex items-center gap-3">
-                    <Linkedin className="w-4 h-4 text-[#E43D12]" />
+                    <Linkedin className="w-4 h-4 text-gold-600" />
                     <span className="text-xs font-semibold">LinkedIn Profile</span>
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-[#242424]/50 group-hover:text-[#E43D12] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight className="w-4 h-4 text-charcoal/40 group-hover:text-navy-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
 
                 <a
                   href={personalInfo.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-3.5 rounded-xl bg-[#FFA2B6]/20 hover:bg-[#FFA2B6]/40 border border-[#E43D12]/20 hover:border-[#E43D12]/50 transition-all text-[#242424] group"
+                  className="flex items-center justify-between p-3.5 rounded-xl bg-ivory hover:bg-cream/60 border border-gold-500/25 hover:border-gold-500/50 transition-all text-navy-900 group"
                 >
                   <div className="flex items-center gap-3">
-                    <Github className="w-4 h-4 text-[#E43D12]" />
+                    <Github className="w-4 h-4 text-gold-600" />
                     <span className="text-xs font-semibold">GitHub Profile</span>
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-[#242424]/50 group-hover:text-[#E43D12] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight className="w-4 h-4 text-charcoal/40 group-hover:text-navy-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
             </div>
 
             {/* Quick response note */}
-            <div className="p-4 rounded-xl bg-[#FFA2B6]/25 border border-[#E43D12]/20 text-xs text-[#242424] flex items-center gap-3">
-              <Sparkles className="w-4 h-4 text-[#E43D12] flex-shrink-0" />
+            <div className="p-4 rounded-xl bg-cream/70 border border-gold-500/20 text-xs text-charcoal/70 flex items-center gap-3">
+              <Sparkles className="w-4 h-4 text-gold-600 flex-shrink-0" />
               <p>
                 Prompt responses guaranteed for all technical inquiries, project discussions, and collaboration opportunities.
               </p>
@@ -226,16 +226,16 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="p-8 sm:p-10 rounded-2xl bg-[#EBE9E1] border border-[#E43D12]/30 shadow-luxury"
+              className="p-8 sm:p-10 rounded-2xl bg-white border border-gold-500/30 shadow-luxury"
             >
               <form onSubmit={handleSubmit} noValidate className="space-y-5">
                 {/* Full Name */}
                 <div>
                   <label
                     htmlFor="fullName"
-                    className="block text-xs uppercase tracking-wider font-semibold text-[#242424] mb-1.5 flex items-center gap-1.5"
+                    className="block text-xs uppercase tracking-wider font-semibold text-navy-900 mb-1.5 flex items-center gap-1.5"
                   >
-                    <User className="w-3.5 h-3.5 text-[#E43D12]" />
+                    <User className="w-3.5 h-3.5 text-gold-600" />
                     <span>Full Name</span>
                   </label>
                   <input
@@ -247,14 +247,14 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                       if (errors.fullName) setErrors({ ...errors, fullName: undefined });
                     }}
                     placeholder="e.g. Jane Doe"
-                    className={`w-full px-4 py-3 rounded-xl bg-white/80 border text-sm text-[#242424] placeholder-[#242424]/40 focus:outline-none focus:ring-2 focus:ring-[#E43D12]/30 transition-all ${
+                    className={`w-full px-4 py-3 rounded-xl bg-ivory/60 border text-sm text-navy-900 placeholder-charcoal/40 focus:outline-none focus:ring-2 focus:ring-gold-500/30 transition-all ${
                       errors.fullName
-                        ? 'border-red-500 focus:border-red-500'
-                        : 'border-[#E43D12]/25 focus:border-[#E43D12]'
+                        ? 'border-red-400 focus:border-red-400'
+                        : 'border-gold-500/25 focus:border-gold-500'
                     }`}
                   />
                   {errors.fullName && (
-                    <p className="mt-1 text-xs text-red-600 font-medium">{errors.fullName}</p>
+                    <p className="mt-1 text-xs text-red-600">{errors.fullName}</p>
                   )}
                 </div>
 
@@ -262,9 +262,9 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-xs uppercase tracking-wider font-semibold text-[#242424] mb-1.5 flex items-center gap-1.5"
+                    className="block text-xs uppercase tracking-wider font-semibold text-navy-900 mb-1.5 flex items-center gap-1.5"
                   >
-                    <AtSign className="w-3.5 h-3.5 text-[#E43D12]" />
+                    <AtSign className="w-3.5 h-3.5 text-gold-600" />
                     <span>Email Address</span>
                   </label>
                   <input
@@ -276,14 +276,14 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                       if (errors.email) setErrors({ ...errors, email: undefined });
                     }}
                     placeholder="name@company.com"
-                    className={`w-full px-4 py-3 rounded-xl bg-white/80 border text-sm text-[#242424] placeholder-[#242424]/40 focus:outline-none focus:ring-2 focus:ring-[#E43D12]/30 transition-all ${
+                    className={`w-full px-4 py-3 rounded-xl bg-ivory/60 border text-sm text-navy-900 placeholder-charcoal/40 focus:outline-none focus:ring-2 focus:ring-gold-500/30 transition-all ${
                       errors.email
-                        ? 'border-red-500 focus:border-red-500'
-                        : 'border-[#E43D12]/25 focus:border-[#E43D12]'
+                        ? 'border-red-400 focus:border-red-400'
+                        : 'border-gold-500/25 focus:border-gold-500'
                     }`}
                   />
                   {errors.email && (
-                    <p className="mt-1 text-xs text-red-600 font-medium">{errors.email}</p>
+                    <p className="mt-1 text-xs text-red-600">{errors.email}</p>
                   )}
                 </div>
 
@@ -291,9 +291,9 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-xs uppercase tracking-wider font-semibold text-[#242424] mb-1.5 flex items-center gap-1.5"
+                    className="block text-xs uppercase tracking-wider font-semibold text-navy-900 mb-1.5 flex items-center gap-1.5"
                   >
-                    <FileText className="w-3.5 h-3.5 text-[#E43D12]" />
+                    <FileText className="w-3.5 h-3.5 text-gold-600" />
                     <span>Subject</span>
                   </label>
                   <input
@@ -305,14 +305,14 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                       if (errors.subject) setErrors({ ...errors, subject: undefined });
                     }}
                     placeholder="Project Inquiry / Full Stack Opportunity"
-                    className={`w-full px-4 py-3 rounded-xl bg-white/80 border text-sm text-[#242424] placeholder-[#242424]/40 focus:outline-none focus:ring-2 focus:ring-[#E43D12]/30 transition-all ${
+                    className={`w-full px-4 py-3 rounded-xl bg-ivory/60 border text-sm text-navy-900 placeholder-charcoal/40 focus:outline-none focus:ring-2 focus:ring-gold-500/30 transition-all ${
                       errors.subject
-                        ? 'border-red-500 focus:border-red-500'
-                        : 'border-[#E43D12]/25 focus:border-[#E43D12]'
+                        ? 'border-red-400 focus:border-red-400'
+                        : 'border-gold-500/25 focus:border-gold-500'
                     }`}
                   />
                   {errors.subject && (
-                    <p className="mt-1 text-xs text-red-600 font-medium">{errors.subject}</p>
+                    <p className="mt-1 text-xs text-red-600">{errors.subject}</p>
                   )}
                 </div>
 
@@ -320,9 +320,9 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-xs uppercase tracking-wider font-semibold text-[#242424] mb-1.5 flex items-center gap-1.5"
+                    className="block text-xs uppercase tracking-wider font-semibold text-navy-900 mb-1.5 flex items-center gap-1.5"
                   >
-                    <MessageSquare className="w-3.5 h-3.5 text-[#E43D12]" />
+                    <MessageSquare className="w-3.5 h-3.5 text-gold-600" />
                     <span>Message</span>
                   </label>
                   <textarea
@@ -334,14 +334,14 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                       if (errors.message) setErrors({ ...errors, message: undefined });
                     }}
                     placeholder="Tell me about your project, idea, or role..."
-                    className={`w-full px-4 py-3 rounded-xl bg-white/80 border text-sm text-[#242424] placeholder-[#242424]/40 focus:outline-none focus:ring-2 focus:ring-[#E43D12]/30 transition-all resize-y ${
+                    className={`w-full px-4 py-3 rounded-xl bg-ivory/60 border text-sm text-navy-900 placeholder-charcoal/40 focus:outline-none focus:ring-2 focus:ring-gold-500/30 transition-all resize-y ${
                       errors.message
-                        ? 'border-red-500 focus:border-red-500'
-                        : 'border-[#E43D12]/25 focus:border-[#E43D12]'
+                        ? 'border-red-400 focus:border-red-400'
+                        : 'border-gold-500/25 focus:border-gold-500'
                     }`}
                   />
                   {errors.message && (
-                    <p className="mt-1 text-xs text-red-600 font-medium">{errors.message}</p>
+                    <p className="mt-1 text-xs text-red-600">{errors.message}</p>
                   )}
                 </div>
 
@@ -353,7 +353,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                     size="lg"
                     disabled={isSubmitting}
                     className="w-full shadow-luxury"
-                    icon={<Send className="w-4 h-4 text-[#EFB11D]" />}
+                    icon={<Send className="w-4 h-4" />}
                   >
                     {isSubmitting ? 'Formatting Message...' : 'Send Message'}
                   </GoldButton>
@@ -361,7 +361,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
 
                 {/* Submission notice */}
                 {submittedMessage && (
-                  <p className="text-xs text-[#242424] bg-[#FFA2B6]/30 p-3 rounded-lg border border-[#E43D12]/40 text-center font-semibold">
+                  <p className="text-xs text-emerald-700 bg-emerald-50 p-3 rounded-lg border border-emerald-200 text-center font-medium">
                     {submittedMessage}
                   </p>
                 )}
